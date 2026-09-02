@@ -287,3 +287,15 @@ footer{
     padding:32px 22px;
   }
 }
+function updateLoveCounter(){
+  const start = new Date(2025, 1, 14);
+  const now = new Date();
+
+  const diff = now - start;
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+
+  document.getElementById("loveCounter").textContent =
+    `عدّى على حكايتنا ${days} يوم ❤️`;
+}
+
+updateLoveCounter();
