@@ -42,3 +42,14 @@ function updateLoveCounter(){
 }
 
 updateLoveCounter();
+function openPhoto(imageName){
+  const modal = document.getElementById("photoModal");
+  const bigPhoto = document.getElementById("bigPhoto");
+
+  bigPhoto.src = imageName;
+  modal.style.display = "flex";
+}
+
+function closePhoto(){
+  document.getElementById("photoModal").style.display = "none";
+}
