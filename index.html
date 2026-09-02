@@ -110,37 +110,54 @@
 
     <!-- الصور -->
     <section id="photos">
-      <h2>📸 ألبوم زياد وإيمان</h2>
+  <h2>📸 صورنا</h2>
 
-      <div class="gallery">
-<div class="gallery">
+  <div class="gallery">
 
-  <div class="photo" style="background-image:url('memory1.jpg');">
-    <div>
-      <strong>❤️ أول ذكرى</strong>
-      <p>أول لحظة تستاهل تفضل معانا.</p>
+    <div class="photo"
+         onclick="openPhoto('IMG-20260524-WA0015.jpg')"
+         style="background-image:url('IMG-20260524-WA0015.jpg');">
+      <div>
+        <strong>❤️ أول ذكرى</strong>
+        <p>أول لحظة تستاهل تفضل معانا.</p>
+      </div>
     </div>
+
+    <div class="photo"
+         onclick="openPhoto('Screenshot_2025-07-20-12-20-59-10_7352322957d4404136654ef4adb64504.jpg')"
+         style="background-image:url('Screenshot_2025-07-20-12-20-59-10_7352322957d4404136654ef4adb64504.jpg');">
+      <div>
+        <strong>💕 يوم جميل</strong>
+        <p>من الأيام اللي بنفتكرها ونبتسم.</p>
+      </div>
+    </div>
+
+    <div class="photo"
+         onclick="openPhoto('IMG-20260701-WA0026.jpg')"
+         style="background-image:url('IMG-20260701-WA0026.jpg');">
+      <div>
+        <strong>✨ لحظة لا تُنسى</strong>
+        <p>ذكرى صغيرة بس معناها كبير.</p>
+      </div>
+    </div>
+
+    <div class="photo"
+         onclick="openPhoto('Screenshot_2025-03-21-23-53-41-83_7352322957d4404136654ef4adb64504.jpg')"
+         style="background-image:url('Screenshot_2025-03-21-23-53-41-83_7352322957d4404136654ef4adb64504.jpg');">
+      <div>
+        <strong>🥹 أجمل حاجة</strong>
+        <p>كل حاجة بينا حلوة.</p>
+      </div>
+    </div>
+
   </div>
+</section>
 
-  <div class="photo" style="background-image:url('memory2.jpg');">
-    <div>
-      <strong>💕 يوم جميل</strong>
-      <p>من الأيام اللي بنفتكرها ونبتسم.</p>
-    </div>
-  </div>
-
-  <div class="photo" style="background-image:url('memory3.jpg');">
-    <div>
-      <strong>✨ لحظة لا تُنسى</strong>
-      <p>ذكرى صغيرة بس معناها كبير.</p>
-    </div>
-  </div>
-
-  <div class="photo" style="background-image:url('memory4.jpg');">
-    <div>
-      <strong>🥹 أجمل حاجة</strong>
-      <p>كل حاجة بينا حلوة.</p>
-    </div>
+<!-- نافذة تكبير الصورة -->
+<div id="photoModal" class="photo-modal" onclick="closePhoto()">
+  <span class="close-photo">×</span>
+  <img id="bigPhoto" src="" alt="صورة من حكايتنا">
+</div>
   </div>
 
 </div>
