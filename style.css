@@ -217,24 +217,39 @@ section{
 }
 
 .photo{
-  min-height:180px;
+ .photo{
+  min-height:260px;
   border-radius:22px;
   padding:18px;
   display:flex;
   align-items:end;
-  background:
-    linear-gradient(
-      145deg,
-      rgba(110,60,120,.7),
-      rgba(25,18,40,.85)
-    );
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
   border:1px solid rgba(255,190,220,.2);
   color:#fff;
-  box-shadow:0 10px 30px rgba(0,0,0,.2);
+  overflow:hidden;
+  position:relative;
+  box-shadow:0 10px 30px rgba(0,0,0,.3);
 }
 
-.hint{
-  color:#a99aaa;
+.photo > div{
+  width:100%;
+  padding:14px;
+  border-radius:15px;
+  background:rgba(0,0,0,.55);
+  backdrop-filter:blur(4px);
+}
+
+.photo strong{
+  display:block;
+  font-size:18px;
+}
+
+.photo p{
+  margin:6px 0 0;
+  color:#f5e8ef;
+}
 }
 
 .timeline{
