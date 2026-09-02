@@ -458,3 +458,32 @@ updateLoveCounter();
   background:rgba(255,120,180,.12);
   border:1px solid rgba(255,190,220,.3);
 }
+#secretMessage{
+  display:none;
+  margin-top:25px;
+  padding:22px;
+  border-radius:20px;
+  background:rgba(255,120,180,.12);
+  border:1px solid rgba(255,190,220,.3);
+  color:#ffd7e9;
+  font-size:20px;
+  line-height:2;
+  text-align:center;
+}
+
+#secretMessage.show-secret{
+  display:block;
+  animation:secretPop .5s ease;
+}
+
+@keyframes secretPop{
+  from{
+    opacity:0;
+    transform:scale(.8);
+  }
+
+  to{
+    opacity:1;
+    transform:scale(1);
+  }
+}
