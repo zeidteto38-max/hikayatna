@@ -241,13 +241,13 @@ section{
 }
 
 .photo strong{
-  display:block;
-  font-size:18px;
+  font-size:14px;
 }
 
 .photo p{
-  margin:6px 0 0;
-  color:#f5e8ef;
+  font-size:12px;
+  margin:4px 0 0;
+}
 }
 }
 
