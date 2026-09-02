@@ -1,75 +1,581 @@
-const DEMO_PASSWORD = "224119";
+<!doctype html>
+<html lang="ar" dir="rtl">
 
-function login() {
-  const password = document.getElementById("password");
-  const loginBox = document.getElementById("login");
-  const site = document.getElementById("site");
-  const error = document.getElementById("error");
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  if (password && password.value === DEMO_PASSWORD) {
-    loginBox.classList.add("hidden");
-    site.classList.remove("hidden");
-    sessionStorage.setItem("hikayatna_logged_in", "1");
-  } else if (error) {
-    error.textContent = "كلمة المرور غير صحيحة.";
+  <title>زياد ❤️ إيمان</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- =========================
+     صفحة تسجيل الدخول
+========================= -->
+
+<section id="login" class="screen">
+
+  <div class="login-card">
+
+    <div class="heart">♡</div>
+
+    <h1>زياد ❤️ إيمان</h1>
+
+    <p>حكاية بدأت من 14 فبراير 2024</p>
+
+    <input
+      id="password"
+      type="password"
+      placeholder="اكتب كلمة المرور"
+    >
+
+    <button onclick="login()" type="button">
+      دخول ❤️
+    </button>
+
+    <small>مساحتنا الخاصة ❤️</small>
+
+    <div id="error"></div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     الموقع
+========================= -->
+
+<main id="site" style="display:none;">
+
+  <header>
+
+    <div>
+
+      <span class="eyebrow">
+        مساحتنا الخاصة
+      </span>
+
+      <h1>
+        زياد ❤️ إيمان
+      </h1>
+
+    </div>
+
+    <button
+      class="logout"
+      onclick="logout()"
+      type="button"
+    >
+      خروج
+    </button>
+
+  </header>
+
+
+  <!-- القائمة -->
+
+  <nav>
+
+    <a href="#home">الرئيسية</a>
+
+    <a href="#photos">صورنا</a>
+
+    <a href="#music">أغنيتنا</a>
+
+    <a href="#timeline">خط حكايتنا</a>
+
+    <a href="#notes">مذكرات</a>
+
+    <a href="#secret">رسالة سرية</a>
+
+  </nav>
+
+
+  <!-- =========================
+       الأغنية
+  ========================= -->
+
+  <section id="music">
+
+    <div class="music-card">
+
+      <h2>
+        🎵 أغنيتنا ❤️
+      </h2>
+
+      <p>
+        بحبك — تامر حسني
+      </p>
+
+      <iframe
+        width="100%"
+        height="315"
+        src="https://www.youtube.com/embed/lv_--dcoEdg"
+        title="أغنيتنا ❤️"
+        frameborder="0"
+        allow="autoplay; encrypted-media; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       عداد الأيام
+  ========================= -->
+
+  <section id="counter">
+
+    <div class="counter-card">
+
+      <div class="counter-heart">
+        ❤️
+      </div>
+
+      <h2>
+        حكايتنا مستمرة
+      </h2>
+
+      <div id="loveCounter">
+        جاري حساب أيام حكايتنا... ❤️
+      </div>
+
+      <p>
+        من 14 فبراير 2024 إلى الآن
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       الرئيسية
+  ========================= -->
+
+  <section id="home" class="hero">
+
+    <div>
+
+      <p class="eyebrow">
+        أهلاً بك
+      </p>
+
+      <h2>
+        هنا بنحفظ أجمل لحظاتنا.
+      </h2>
+
+      <p>
+        مكان بسيط وهادئ نجمع فيه الصور،
+        الحكايات، والتواريخ اللي ليها معنى.
+      </p>
+
+    </div>
+
+    <div class="quote">
+      "بحبك يا إيمان ❤️"
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       الصور
+  ========================= -->
+
+  <section id="photos">
+
+    <h2>
+      📸 صورنا
+    </h2>
+
+    <div class="gallery">
+
+
+      <div
+        class="photo"
+        onclick="openPhoto('IMG-20260524-WA0015.jpg')"
+        style="background-image:url('IMG-20260524-WA0015.jpg');"
+      >
+
+        <div>
+
+          <strong>
+            ❤️ أول ذكرى
+          </strong>
+
+          <p>
+            أول لحظة تستاهل تفضل معانا.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div
+        class="photo"
+        onclick="openPhoto('Screenshot_2025-07-20-12-20-59-10_7352322957d4404136654ef4adb64504.jpg')"
+        style="background-image:url('Screenshot_2025-07-20-12-20-59-10_7352322957d4404136654ef4adb64504.jpg');"
+      >
+
+        <div>
+
+          <strong>
+            💕 يوم جميل
+          </strong>
+
+          <p>
+            من الأيام اللي بنفتكرها ونبتسم.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div
+        class="photo"
+        onclick="openPhoto('IMG-20260701-WA0026.jpg')"
+        style="background-image:url('IMG-20260701-WA0026.jpg');"
+      >
+
+        <div>
+
+          <strong>
+            ✨ لحظة لا تُنسى
+          </strong>
+
+          <p>
+            ذكرى صغيرة بس معناها كبير.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div
+        class="photo"
+        onclick="openPhoto('Screenshot_2025-03-21-23-53-41-83_7352322957d4404136654ef4adb64504.jpg')"
+        style="background-image:url('Screenshot_2025-03-21-23-53-41-83_7352322957d4404136654ef4adb64504.jpg');"
+      >
+
+        <div>
+
+          <strong>
+            🥹 أجمل حاجة
+          </strong>
+
+          <p>
+            كل حاجة بينا حلوة.
+          </p>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       تكبير الصور
+  ========================= -->
+
+  <div
+    id="photoModal"
+    class="photo-modal"
+    onclick="closePhoto()"
+  >
+
+    <span class="close-photo">
+      ×
+    </span>
+
+    <img
+      id="bigPhoto"
+      src=""
+      alt="صورة من حكايتنا"
+      onclick="event.stopPropagation()"
+    >
+
+  </div>
+
+
+  <!-- =========================
+       خط الحكاية
+  ========================= -->
+
+  <section id="timeline">
+
+    <h2>
+      📅 خط حكايتنا
+    </h2>
+
+    <div class="timeline">
+
+
+      <article>
+
+        <b>
+          💌 14 فبراير 2024
+        </b>
+
+        <span>
+          بدأت الحكاية والكلام بين زياد وإيمان ❤️
+        </span>
+
+      </article>
+
+
+      <article>
+
+        <b>
+          ❤️ 19 أغسطس 2024
+        </b>
+
+        <span>
+          أول مقابلة جمعتنا، وذكرى عمرها ما تتنسي.
+        </span>
+
+      </article>
+
+
+      <article>
+
+        <b>
+          ✨ أجمل ذكرى
+        </b>
+
+        <span>
+          كل حاجة بينا حلوة ❤️
+        </span>
+
+      </article>
+
+
+      <article>
+
+        <b>
+          💕 كلمة من القلب
+        </b>
+
+        <span>
+          بحبك يا إيمان ❤️
+        </span>
+
+      </article>
+
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       المذكرات
+  ========================= -->
+
+  <section id="notes">
+
+    <h2>
+      📝 مذكراتنا
+    </h2>
+
+    <textarea
+      placeholder="اكتب هنا رسالة أو ذكرى..."
+    ></textarea>
+
+  </section>
+
+
+  <!-- =========================
+       الرسالة السرية
+  ========================= -->
+
+  <section id="secret">
+
+    <div class="secret-card">
+
+      <h2>
+        💌 رسالة ليكي يا إيمان
+      </h2>
+
+      <p>
+        في رسالة صغيرة مستخبية هنا...
+      </p>
+
+      <button
+        type="button"
+        onclick="showSecret()"
+      >
+        💕 اضغطي هنا
+      </button>
+
+      <div id="secretMessage"></div>
+
+    </div>
+
+  </section>
+
+
+  <footer>
+
+    زياد ❤️ إيمان — حكايتنا © 2026
+
+  </footer>
+
+</main>
+
+
+<!-- =========================
+     JavaScript
+========================= -->
+
+<script>
+
+const PASSWORD = "224119";
+
+
+function login(){
+
+  const password =
+    document.getElementById("password");
+
+  const loginPage =
+    document.getElementById("login");
+
+  const site =
+    document.getElementById("site");
+
+  const error =
+    document.getElementById("error");
+
+
+  if(password.value === PASSWORD){
+
+    loginPage.style.display = "none";
+
+    site.style.display = "block";
+
+    error.textContent = "";
+
+  }else{
+
+    error.textContent =
+      "كلمة المرور غير صحيحة ❤️";
+
   }
+
 }
 
-function logout() {
-  sessionStorage.removeItem("hikayatna_logged_in");
-  location.reload();
+
+function logout(){
+
+  document.getElementById("login").style.display =
+    "grid";
+
+  document.getElementById("site").style.display =
+    "none";
+
+  document.getElementById("password").value = "";
+
 }
 
-function showSecret() {
-  const message = document.getElementById("secretMessage");
 
-  if (message) {
-    message.textContent = "وجودك في حياتي هو كل حياتي ❤️";
-    message.classList.add("show-secret");
-  }
+function showSecret(){
+
+  const message =
+    document.getElementById("secretMessage");
+
+  message.textContent =
+    "وجودك في حياتي هو كل حياتي ❤️";
+
+  message.classList.add("show-secret");
+
 }
 
-function updateLoveCounter() {
-  const start = new Date(2024, 1, 14);
-  const now = new Date();
 
-  const diff = now - start;
-  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+function updateLoveCounter(){
 
-  const counter = document.getElementById("loveCounter");
+  const start =
+    new Date(2024, 1, 14);
 
-  if (counter) {
-    counter.textContent = `عدّى على حكايتنا ${days} يوم ❤️`;
+  const now =
+    new Date();
+
+  const difference =
+    now - start;
+
+  const days =
+    Math.floor(
+      difference /
+      (1000 * 60 * 60 * 24)
+    );
+
+  const counter =
+    document.getElementById("loveCounter");
+
+  if(counter){
+
+    counter.textContent =
+      "عدّى على حكايتنا " +
+      days +
+      " يوم ❤️";
+
   }
+
 }
 
-function openPhoto(imageName) {
-  const modal = document.getElementById("photoModal");
-  const bigPhoto = document.getElementById("bigPhoto");
 
-  if (modal && bigPhoto) {
-    bigPhoto.src = imageName;
-    modal.style.display = "flex";
-  }
+function openPhoto(imageName){
+
+  const modal =
+    document.getElementById("photoModal");
+
+  const image =
+    document.getElementById("bigPhoto");
+
+  image.src = imageName;
+
+  modal.style.display = "flex";
+
 }
 
-function closePhoto() {
-  const modal = document.getElementById("photoModal");
 
-  if (modal) {
-    modal.style.display = "none";
-  }
+function closePhoto(){
+
+  document.getElementById("photoModal")
+    .style.display = "none";
+
 }
 
-document.addEventListener("DOMContentLoaded", function () {
 
-  const loginBox = document.getElementById("login");
-  const site = document.getElementById("site");
+updateLoveCounter();
 
-  if (sessionStorage.getItem("hikayatna_logged_in") === "1") {
-    loginBox.classList.add("hidden");
-    site.classList.remove("hidden");
-  }
 
-  updateLoveCounter();
-});
+document
+  .getElementById("password")
+  .addEventListener("keydown", function(event){
+
+    if(event.key === "Enter"){
+
+      login();
+
+    }
+
+  });
+
+</script>
+
+</body>
+    </html>
