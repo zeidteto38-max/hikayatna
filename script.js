@@ -18,17 +18,16 @@ function login(){
 function logout(){
   sessionStorage.removeItem("hikayatna_logged_in");
   location.reload();
+}
 
-  function showSecret(){
+function showSecret(){
   const message = document.getElementById("secretMessage");
 
   if(message){
     message.innerHTML = "وجودك في حياتي هو كل حياتي ❤️";
     message.classList.add("show-secret");
   }
-  }
-  
-
+}
 
 function updateLoveCounter(){
   const start = new Date(2024, 1, 14);
