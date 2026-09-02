@@ -288,7 +288,7 @@ footer{
   }
 }
 function updateLoveCounter(){
-  const start = new Date(2025, 1, 14);
+  const start = new Date(2024, 2, 14);
   const now = new Date();
 
   const diff = now - start;
