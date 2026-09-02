@@ -1,13 +1,17 @@
 const DEMO_PASSWORD = "224119";
 
 function login(){
-  const value = document.getElementById("password").value;
-  if(value === DEMO_PASSWORD){
-    document.getElementById("login").classList.add("hidden");
-    document.getElementById("site").classList.remove("hidden");
+  const password = document.getElementById("password");
+  const loginBox = document.getElementById("login");
+  const site = document.getElementById("site");
+  const error = document.getElementById("error");
+
+  if(password.value === DEMO_PASSWORD){
+    loginBox.classList.add("hidden");
+    site.classList.remove("hidden");
     sessionStorage.setItem("hikayatna_logged_in","1");
   }else{
-    document.getElementById("error").textContent="كلمة المرور غير صحيحة.";
+    error.textContent = "كلمة المرور غير صحيحة.";
   }
 }
 
@@ -16,17 +20,14 @@ function logout(){
   location.reload();
 }
 
-if(sessionStorage.getItem("hikayatna_logged_in")==="1"){
-  document.getElementById("login").classList.add("hidden");
-  document.getElementById("site").classList.remove("hidden");
+function showSecret(){
+  const message = document.getElementById("secretMessage");
+
+  if(message){
+    message.style.display = "block";
+  }
 }
 
-document.getElementById("password").addEventListener("keydown",e=>{
-  if(e.key==="Enter") login();
-});
-function showSecret(){
-  document.getElementById("secretMessage").style.display = "block";
-}
 function updateLoveCounter(){
   const start = new Date(2024, 1, 14);
   const now = new Date();
@@ -41,22 +42,40 @@ function updateLoveCounter(){
   }
 }
 
-updateLoveCounter();
 function openPhoto(imageName){
   const modal = document.getElementById("photoModal");
   const bigPhoto = document.getElementById("bigPhoto");
 
-  bigPhoto.src = imageName;
-  modal.style.display = "flex";
+  if(modal && bigPhoto){
+    bigPhoto.src = imageName;
+    modal.style.display = "flex";
+  }
 }
 
 function closePhoto(){
-  document.getElementById("photoModal").style.display = "none";
-}
-function showSecret(){
-  const message = document.getElementById("secretMessage");
+  const modal = document.getElementById("photoModal");
 
-  if(message){
-    message.style.setProperty("display", "block", "important");
+  if(modal){
+    modal.style.display = "none";
   }
 }
+
+document.addEventListener("DOMContentLoaded", function(){
+
+  if(sessionStorage.getItem("hikayatna_logged_in") === "1"){
+    document.getElementById("login").classList.add("hidden");
+    document.getElementById("site").classList.remove("hidden");
+  }
+
+  const password = document.getElementById("password");
+
+  if(password){
+    password.addEventListener("keydown", function(e){
+      if(e.key === "Enter"){
+        login();
+      }
+    });
+  }
+
+  updateLoveCounter();
+});
