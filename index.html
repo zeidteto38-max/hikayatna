@@ -231,32 +231,19 @@
 
     <!-- الرسالة السرية -->
     <section id="secret">
-      <h2>💌 رسالة سرية</h2>
+  <div class="secret-card">
+    <h2>💌 رسالة ليكي يا إيمان</h2>
+    <p>في رسالة صغيرة مستخبية هنا...</p>
 
-      <div style="text-align:center;margin:25px 0;">
+    <button onclick="showSecret()">
+      💕 اضغطي هنا
+    </button>
 
-        <button onclick="showSecret()">
-          💕 اضغط هنا
-        </button>
-
-        <p
-          id="secretMessage"
-          style="
-            display:none;
-            margin-top:20px;
-            padding:22px;
-            border-radius:20px;
-            background:rgba(40,20,50,.75);
-            border:1px solid rgba(255,190,220,.25);
-            color:#ffd7e9;
-            line-height:2;
-          "
-        >
-          وجودك في حياتي هو كل حياتي ❤️
-        </p>
-
-      </div>
-    </section>
+    <p id="secretMessage">
+      وجودك في حياتي هو كل حياتي ❤️
+    </p>
+  </div>
+</section>
 
 
     <footer>
