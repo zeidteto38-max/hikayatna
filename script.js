@@ -18,12 +18,11 @@ function login(){
 function logout(){
   sessionStorage.removeItem("hikayatna_logged_in");
   location.reload();
-}
 function showSecret(){
   const message = document.getElementById("secretMessage");
 
   if(message){
-    message.style.display = "block";
+    message.style.setProperty("display", "block", "important");
   }
 }
   
