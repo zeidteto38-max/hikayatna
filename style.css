@@ -218,20 +218,20 @@ section{
 
 .photo{
  .photo{
-  min-height:260px;
-  border-radius:22px;
-  padding:18px;
+  min-height:180px;
+  border-radius:18px;
+  padding:10px;
   display:flex;
   align-items:end;
-  background-size:cover;
+  background-size:contain;
   background-position:center;
   background-repeat:no-repeat;
+  background-color:rgba(20,14,30,.7);
   border:1px solid rgba(255,190,220,.2);
   color:#fff;
   overflow:hidden;
   position:relative;
-  box-shadow:0 10px 30px rgba(0,0,0,.3);
-}
+ }
 
 .photo > div{
   width:100%;
