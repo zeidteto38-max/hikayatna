@@ -57,6 +57,6 @@ function showSecret(){
   const message = document.getElementById("secretMessage");
 
   if(message){
-    message.style.display = "block";
+    message.style.setProperty("display", "block", "important");
   }
 }
