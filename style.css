@@ -337,6 +337,36 @@ footer{
   color:white;
   cursor:pointer;
   z-index:10000;
+}.counter-card{
+  margin-top:25px;
+  padding:25px 20px;
+  text-align:center;
+  border-radius:25px;
+  background:rgba(35,18,45,.75);
+  border:1px solid rgba(255,190,220,.25);
+  box-shadow:0 15px 40px rgba(0,0,0,.25);
+}
+
+.counter-heart{
+  font-size:35px;
+}
+
+.counter-card h2{
+  margin:8px 0;
+  font-size:25px;
+}
+
+#loveCounter{
+  font-size:22px;
+  font-weight:bold;
+  color:#ffafd5;
+  margin:12px 0;
+}
+
+.counter-card p{
+  margin:0;
+  color:#bdb0c0;
+  font-size:14px;
 }
 
 updateLoveCounter();
