@@ -414,16 +414,30 @@
         في رسالة صغيرة مستخبية هنا...
       </p>
 
-      <button
-        type="button"
-        onclick="showSecret()"
-      >
-        💕 اضغطي هنا
-      </button>
+    <button
+  type="button"
+  onclick="
+    document.getElementById('secretMessage').innerHTML =
+    'وجودك في حياتي هو كل حياتي ❤️';
+    document.getElementById('secretMessage').style.display = 'block';
+  "
+>
+  💕 اضغطي هنا
+</button>
 
-      <div id="secretMessage"></div>
-
-    </div>
+<div
+  id="secretMessage"
+  style="
+    display:none;
+    margin-top:25px;
+    padding:22px;
+    border-radius:20px;
+    background:rgba(255,120,180,.12);
+    color:#ffd7e9;
+    font-size:20px;
+    text-align:center;
+  "
+></div>  
 
   </section>
 
