@@ -420,7 +420,6 @@ updateLoveCounter();
 }
 
 #secretMessage{
-  #secretMessage{
   display:none !important;
   margin-top:25px;
   padding:22px;
