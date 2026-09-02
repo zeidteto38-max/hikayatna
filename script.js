@@ -24,3 +24,6 @@ if(sessionStorage.getItem("hikayatna_logged_in")==="1"){
 document.getElementById("password").addEventListener("keydown",e=>{
   if(e.key==="Enter") login();
 });
+function showSecret(){
+  document.getElementById("secretMessage").style.display = "block";
+}
