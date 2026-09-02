@@ -27,3 +27,18 @@ document.getElementById("password").addEventListener("keydown",e=>{
 function showSecret(){
   document.getElementById("secretMessage").style.display = "block";
 }
+function updateLoveCounter(){
+  const start = new Date(2024, 1, 14);
+  const now = new Date();
+
+  const diff = now - start;
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+
+  const counter = document.getElementById("loveCounter");
+
+  if(counter){
+    counter.textContent = `عدّى على حكايتنا ${days} يوم ❤️`;
+  }
+}
+
+updateLoveCounter();
