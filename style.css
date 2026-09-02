@@ -370,3 +370,30 @@ footer{
 }
 
 updateLoveCounter();
+.music-card{
+  margin-top:25px;
+  padding:25px;
+  text-align:center;
+  border-radius:25px;
+  background:rgba(35,18,45,.75);
+  border:1px solid rgba(255,190,220,.25);
+  box-shadow:0 15px 40px rgba(0,0,0,.25);
+}
+
+.music-card h2{
+  margin:0 0 8px;
+  font-size:26px;
+}
+
+.music-card p{
+  color:#d8cbd7;
+  margin-bottom:20px;
+}
+
+.music-card iframe{
+  width:100%;
+  max-width:700px;
+  border-radius:18px;
+  display:block;
+  margin:auto;
+}
