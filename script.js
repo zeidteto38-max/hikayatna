@@ -19,7 +19,6 @@ function logout(){
   sessionStorage.removeItem("hikayatna_logged_in");
   location.reload();
 }
-
 function showSecret(){
   const message = document.getElementById("secretMessage");
 
@@ -27,6 +26,8 @@ function showSecret(){
     message.style.display = "block";
   }
 }
+  
+
 
 function updateLoveCounter(){
   const start = new Date(2024, 1, 14);
