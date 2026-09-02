@@ -53,3 +53,10 @@ function openPhoto(imageName){
 function closePhoto(){
   document.getElementById("photoModal").style.display = "none";
 }
+function showSecret(){
+  const message = document.getElementById("secretMessage");
+
+  if(message){
+    message.style.display = "block";
+  }
+}
