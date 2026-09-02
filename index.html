@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>حكايتنا ❤️</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section id="login" class="screen">
+    <div class="login-card">
+      <div class="heart">♡</div>
+      <h1>حكايتنا</h1>
+      <p>مساحتنا الخاصة للذكريات ❤️</p>
+      <input id="password" type="password" placeholder="اكتب كلمة المرور" autocomplete="current-password">
+      <button onclick="login()">دخول</button>
+      <small>هذا نموذج أولي. كلمة المرور التجريبية: <b>1234</b></small>
+      <div id="error"></div>
+    </div>
+  </section>
+
+  <main id="site" class="hidden">
+    <header>
+      <div>
+        <span class="eyebrow">مساحتنا الخاصة</span>
+        <h1>حكايتنا <span>♡</span></h1>
+      </div>
+      <button class="logout" onclick="logout()">خروج</button>
+    </header>
+
+    <nav>
+      <a href="#home">الرئيسية</a>
+      <a href="#photos">صورنا</a>
+      <a href="#timeline">خط زمني</a>
+      <a href="#notes">مذكرات</a>
+    </nav>
+
+    <section id="home" class="hero">
+      <div>
+        <p class="eyebrow">أهلاً بك</p>
+        <h2>هنا بنحفظ أجمل لحظاتنا.</h2>
+        <p>مكان بسيط وهادئ نجمع فيه الصور، الحكايات، والتواريخ اللي ليها معنى.</p>
+      </div>
+      <div class="quote">"بعض الذكريات لا تنتهي، حتى لو انتهى وقتها."</div>
+    </section>
+
+    <section id="photos">
+      <h2>📸 صورنا</h2>
+      <div class="gallery">
+        <div class="photo">صورتنا الأولى</div>
+        <div class="photo">أجمل يوم</div>
+        <div class="photo">لحظة لا تُنسى</div>
+        <div class="photo">مكان مميز</div>
+      </div>
+      <p class="hint">لإضافة صور حقيقية، استبدل مربعات الصور داخل ملف HTML بصورك.</p>
+    </section>
+
+    <section id="timeline">
+      <h2>📅 خط الحكاية</h2>
+      <div class="timeline">
+        <article><b>البداية</b><span>أول ذكرى نحب نفتكرها.</span></article>
+        <article><b>لحظة مميزة</b><span>يوم يستحق يفضل محفوظ.</span></article>
+        <article><b>اليوم</b><span>والحكاية لسه مكملة ❤️</span></article>
+      </div>
+    </section>
+
+    <section id="notes">
+      <h2>📝 مذكراتنا</h2>
+      <textarea placeholder="اكتب هنا رسالة أو ذكرى..."></textarea>
+    </section>
+
+    <footer>حكايتنا © 2026 — مساحة خاصة للذكريات</footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
