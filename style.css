@@ -310,6 +310,33 @@ footer{
 
   document.getElementById("loveCounter").textContent =
     `عدّى على حكايتنا ${days} يوم ❤️`;
+}.photo-modal{
+  display:none;
+  position:fixed;
+  inset:0;
+  z-index:9999;
+  background:rgba(0,0,0,.9);
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+}
+
+.photo-modal img{
+  max-width:95%;
+  max-height:90vh;
+  object-fit:contain;
+  border-radius:15px;
+  box-shadow:0 0 40px rgba(255,255,255,.2);
+}
+
+.close-photo{
+  position:absolute;
+  top:15px;
+  right:25px;
+  font-size:45px;
+  color:white;
+  cursor:pointer;
+  z-index:10000;
 }
 
 updateLoveCounter();
