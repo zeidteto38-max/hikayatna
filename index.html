@@ -24,10 +24,9 @@
         autocomplete="current-password"
       >
 
-      <button onclick="login()">دخول</button>
+      <button type="button" onclick="login()">دخول</button>
 
       <small>مساحتنا الخاصة ❤️</small>
-
       <div id="error"></div>
     </div>
   </section>
@@ -42,13 +41,14 @@
         <h1>زياد ❤️ إيمان</h1>
       </div>
 
-      <button class="logout" onclick="logout()">خروج</button>
+      <button class="logout" type="button" onclick="logout()">خروج</button>
     </header>
 
 
     <nav>
       <a href="#home">الرئيسية</a>
       <a href="#photos">صورنا</a>
+      <a href="#music">أغنيتنا</a>
       <a href="#timeline">خط حكايتنا</a>
       <a href="#notes">مذكرات</a>
       <a href="#secret">رسالة سرية</a>
@@ -56,55 +56,37 @@
 
 
     <!-- الأغنية -->
-    <div style="text-align:center;margin:25px 0;">
-      <a
-        href="https://www.youtube.com/watch?v=lv_--dcoEdg"
-        target="_blank"
-        style="
-          display:inline-block;
-          padding:14px 22px;
-          border-radius:16px;
-          background:linear-gradient(135deg,#ffb0d7,#d997ff);
-          color:#241127;
-          text-decoration:none;
-          font-weight:bold;
-        "
-      >
-<section id="music">
-  <div class="music-card">
-    <h2>🎵 أغنيتنا ❤️</h2>
-    <p>بحبك — تامر حسني</p>
+    <section id="music">
+      <div class="music-card">
+        <h2>🎵 أغنيتنا ❤️</h2>
+        <p>بحبك — تامر حسني</p>
 
-    <iframe
-      width="100%"
-      height="315"
-      src="https://www.youtube.com/embed/lv_--dcoEdg"
-      title="أغنيتنا ❤️"
-      frameborder="0"
-      allow="autoplay; encrypted-media; picture-in-picture"
-      allowfullscreen>
-    </iframe>
-  </div>
-</section>
-      </a>
-    </div>
+        <iframe
+          width="100%"
+          height="315"
+          src="https://www.youtube.com/embed/lv_--dcoEdg"
+          title="أغنيتنا ❤️"
+          frameborder="0"
+          allow="autoplay; encrypted-media; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
 
 
     <!-- العداد -->
-    <div style="text-align:center;margin:35px 0;">
-      <p style="color:#ffafd5;font-size:18px;">
-        ❤️ حكايتنا بدأت من يوم 14 فبراير 2024
-      </p>
+    <section id="counter">
+      <div class="counter-card">
+        <div class="counter-heart">❤️</div>
+        <h2>حكايتنا مستمرة</h2>
 
-      <div
-        <div class="counter-card">
-  <div class="counter-heart">❤️</div>
-  <h2>حكايتنا مستمرة</h2>
-  <div id="loveCounter">جاري حساب أيام حكايتنا... ❤️</div>
-  <p>من 14 فبراير 2024 إلى الآن</p>
-</div>حكايتنا... ❤️</div>
+        <div id="loveCounter">
+          جاري حساب أيام حكايتنا... ❤️
+        </div>
+
+        <p>من 14 فبراير 2024 إلى الآن</p>
       </div>
-    </div>
+    </section>
 
 
     <!-- الرئيسية -->
@@ -128,57 +110,72 @@
 
     <!-- الصور -->
     <section id="photos">
-  <h2>📸 صورنا</h2>
+      <h2>📸 صورنا</h2>
 
-  <div class="gallery">
+      <div class="gallery">
 
-    <div class="photo"
-         onclick="openPhoto('IMG-20260524-WA0015.jpg')"
-         style="background-image:url('IMG-20260524-WA0015.jpg');">
-      <div>
-        <strong>❤️ أول ذكرى</strong>
-        <p>أول لحظة تستاهل تفضل معانا.</p>
+        <div
+          class="photo"
+          onclick="openPhoto('IMG-20260524-WA0015.jpg')"
+          style="background-image:url('IMG-20260524-WA0015.jpg');"
+        >
+          <div>
+            <strong>❤️ أول ذكرى</strong>
+            <p>أول لحظة تستاهل تفضل معانا.</p>
+          </div>
+        </div>
+
+
+        <div
+          class="photo"
+          onclick="openPhoto('Screenshot_2025-07-20-12-20-59-10_7352322957d4404136654ef4adb64504.jpg')"
+          style="background-image:url('Screenshot_2025-07-20-12-20-59-10_7352322957d4404136654ef4adb64504.jpg');"
+        >
+          <div>
+            <strong>💕 يوم جميل</strong>
+            <p>من الأيام اللي بنفتكرها ونبتسم.</p>
+          </div>
+        </div>
+
+
+        <div
+          class="photo"
+          onclick="openPhoto('IMG-20260701-WA0026.jpg')"
+          style="background-image:url('IMG-20260701-WA0026.jpg');"
+        >
+          <div>
+            <strong>✨ لحظة لا تُنسى</strong>
+            <p>ذكرى صغيرة بس معناها كبير.</p>
+          </div>
+        </div>
+
+
+        <div
+          class="photo"
+          onclick="openPhoto('Screenshot_2025-03-21-23-53-41-83_7352322957d4404136654ef4adb64504.jpg')"
+          style="background-image:url('Screenshot_2025-03-21-23-53-41-83_7352322957d4404136654ef4adb64504.jpg');"
+        >
+          <div>
+            <strong>🥹 أجمل حاجة</strong>
+            <p>كل حاجة بينا حلوة.</p>
+          </div>
+        </div>
+
       </div>
+    </section>
+
+
+    <!-- نافذة تكبير الصور -->
+    <div id="photoModal" class="photo-modal" onclick="closePhoto()">
+      <span class="close-photo">×</span>
+
+      <img
+        id="bigPhoto"
+        src=""
+        alt="صورة من حكايتنا"
+        onclick="event.stopPropagation()"
+      >
     </div>
-
-    <div class="photo"
-         onclick="openPhoto('Screenshot_2025-07-20-12-20-59-10_7352322957d4404136654ef4adb64504.jpg')"
-         style="background-image:url('Screenshot_2025-07-20-12-20-59-10_7352322957d4404136654ef4adb64504.jpg');">
-      <div>
-        <strong>💕 يوم جميل</strong>
-        <p>من الأيام اللي بنفتكرها ونبتسم.</p>
-      </div>
-    </div>
-
-    <div class="photo"
-         onclick="openPhoto('IMG-20260701-WA0026.jpg')"
-         style="background-image:url('IMG-20260701-WA0026.jpg');">
-      <div>
-        <strong>✨ لحظة لا تُنسى</strong>
-        <p>ذكرى صغيرة بس معناها كبير.</p>
-      </div>
-    </div>
-
-    <div class="photo"
-         onclick="openPhoto('Screenshot_2025-03-21-23-53-41-83_7352322957d4404136654ef4adb64504.jpg')"
-         style="background-image:url('Screenshot_2025-03-21-23-53-41-83_7352322957d4404136654ef4adb64504.jpg');">
-      <div>
-        <strong>🥹 أجمل حاجة</strong>
-        <p>كل حاجة بينا حلوة.</p>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- نافذة تكبير الصورة -->
-<div id="photoModal" class="photo-modal" onclick="closePhoto()">
-  <span class="close-photo">×</span>
-  <img id="bigPhoto" src="" alt="صورة من حكايتنا">
-</div>
-  </div>
-
-</div>
 
 
     <!-- خط الحكاية -->
@@ -231,19 +228,27 @@
 
     <!-- الرسالة السرية -->
     <section id="secret">
-  <div class="secret-card">
-    <h2>💌 رسالة ليكي يا إيمان</h2>
-    <p>في رسالة صغيرة مستخبية هنا...</p>
+      <div class="secret-card">
 
-    <button onclick="showSecret()">
-  💕 اضغطي هنا
-</button>
+        <h2>💌 رسالة ليكي يا إيمان</h2>
 
-<p id="secretMessage" style="display:none !important;">
-  وجودك في حياتي هو كل حياتي ❤️
-</p>
-  </div>
-</section>
+        <p>
+          في رسالة صغيرة مستخبية هنا...
+        </p>
+
+        <button type="button" onclick="showSecret()">
+          💕 اضغطي هنا
+        </button>
+
+        <p
+          id="secretMessage"
+          style="display:none !important;"
+        >
+          وجودك في حياتي هو كل حياتي ❤️
+        </p>
+
+      </div>
+    </section>
 
 
     <footer>
@@ -253,71 +258,7 @@
   </main>
 
 
-  <!-- JavaScript -->
   <script src="script.js"></script>
 
 </body>
-</html>    <section id="home" class="hero">
-      <div>
-        <p class="eyebrow">أهلاً بك</p>
-        <h2>هنا بنحفظ أجمل لحظاتنا.</h2>
-        <p>مكان بسيط وهادئ نجمع فيه الصور، الحكايات، والتواريخ اللي ليها معنى.</p>
-      </div>
-      <div class="quote">"بعض الذكريات لا تنتهي، حتى لو انتهى وقتها."</div>
-    </section>
-
-    <section id="photos">
-      <h2>📸 صورنا</h2>
-      <div class="gallery">
-
-  <div class="photo" style="background-image:url('IMG-20260524-WA0015.jpg');">
-    <div>
-      <strong>❤️ أول ذكرى</strong>
-      <p>أول لحظة تستاهل تفضل معانا.</p>
-    </div>
-  </div>
-
-  <div class="photo" style="background-image:url('Screenshot_2025-07-20-12-20-59-10_7352322957d4404136654ef4adb64504.jpg');">
-    <div>
-      <strong>💕 يوم جميل</strong>
-      <p>من الأيام اللي بنفتكرها ونبتسم.</p>
-    </div>
-  </div>
-
-  <div class="photo" style="background-image:url('IMG-20260701-WA0026.jpg');">
-    <div>
-      <strong>✨ لحظة لا تُنسى</strong>
-      <p>ذكرى صغيرة بس معناها كبير.</p>
-    </div>
-  </div>
-
-  <div class="photo" style="background-image:url('Screenshot_2025-03-21-23-53-41-83_7352322957d4404136654ef4adb64504.jpg');">
-    <div>
-      <strong>🥹 أجمل حاجة</strong>
-      <p>كل حاجة بينا حلوة.</p>
-    </div>
-  </div>
-        
-      </div>
-  <div class="timeline">
-    <article>
-      <b>💌 14 فبراير 2024</b>
-      <span>بدأت الحكاية والكلام بين زياد وإيمان ❤️</span>
-    </article>
-
-    <article>
-      <b>❤️ 19 أغسطس 2024</b>
-      <span>أول مقابلة جمعتنا، وذكرى عمرها ما تتنسي.</span>
-    </article>
-
-    <article>
-      <b>✨ أجمل ذكرى</b>
-      <span>كل حاجة بينا حلوة ❤️</span>
-    </article>
-
-    <article>
-      <b>💕 كلمة من القلب</b>
-      <span>بحبك يا إيمان ❤️</span>
-    </article>
-  </div>
-</section>
+</html>
